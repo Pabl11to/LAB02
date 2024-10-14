@@ -1,4 +1,4 @@
-package Calculo01.java
+package Calculo_01.java
  
 import java.util.Arrays;
 import java.util.HashMap;// El HashMap permite ingresar a esos datos 
