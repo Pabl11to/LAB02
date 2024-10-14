@@ -48,3 +48,43 @@ public class Submenu {
 
         
         botones = new JButton[numop];
+  
+        for (int i = 0; i < numop; i++) {
+            final int index = i; 
+            botones[i] = new JButton(opciones[i]);
+            botones[i].addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                  
+                    switch (index) {
+                        case 0:
+                            merge.main(new String[]{})
+                           ;  break;
+                        case 1:
+                            Intersection.main(new String[]{})
+                            ; break;
+                        case 2:
+                            Seleccion.main(new String[]{})
+                            ;break;
+                        case 3: 
+                            Burbuja.main(new String[]{});
+                        
+                    }
+                    
+                }
+            });
+        
+            panelBotones.add(botones[i]);
+        }
+
+        
+        frame.add(panelBotones, BorderLayout.CENTER);
+
+        
+        frame.setVisible(true);
+    }  
+
+    public void setVisible(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+}
