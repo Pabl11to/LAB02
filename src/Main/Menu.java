@@ -36,3 +36,40 @@ public class Menu {
         botones = new JButton[numop];
 
 
+          for (int i = 0; i < numop; i++) {
+            final int index = i; 
+            botones[i] = new JButton(opciones[i]);
+            botones[i].addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                  
+                    switch (index) {
+                        case 0:
+                            Calculo.main(new String[]{})
+                           ;  break;
+                        case 1:
+                            Caracteres.main(new String[]{})
+                            ; break;
+                        case 2:
+                           Submenu.main(new String[]{});break;
+                            
+                        case 3: 
+                            botones[index].setEnabled(!botones[index].isEnabled());
+                            new Carro().setVisible(true); break;
+
+}
+            
+                }
+            });
+            
+            panelBotones.add(botones[i]);
+        }
+
+      
+        frame.add(panelBotones, BorderLayout.CENTER);
+
+     
+        frame.setVisible(true);
+    }
+}
+
