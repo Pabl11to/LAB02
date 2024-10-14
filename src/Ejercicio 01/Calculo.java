@@ -25,7 +25,7 @@ public class Calculo {
         System.out.print("Ingrese lo grande del arreglo: ");
         int tamaño = scanner.nextInt();
         if (tamaño <= 0) {
-            System.out.println("lo grande del arreglo debe ser mayor que 0.");
+            System.out.println("El tamaño del arreglo debe ser mayor que 0.");
             return;
         }
 
